@@ -21,6 +21,7 @@ flask-moment = "*"
 flask-babel = "*"
 guess-language-spirit = "*"
 requests = "*"
+elasticsearch = "*"
 
 [requires]
 python_version = "3.7"
