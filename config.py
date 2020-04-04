@@ -15,9 +15,3 @@ class Config(object):
     POSTS_PER_PAGE = 3
     LANGUAGES = ["en", "fr"]
 
-# Environment variables
-# export MAIL_SERVER=smtp.googlemail.com
-# export MAIL_PORT=587
-# export MAIL_USE_TLS=1
-# export MAIL_USERNAME=corentinvdk@gmail.com
-# export MAIL_PASSWORD=<your-gmail-password>
