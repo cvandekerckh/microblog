@@ -22,6 +22,8 @@ flask-babel = "*"
 guess-language-spirit = "*"
 requests = "*"
 elasticsearch = "*"
+gunicorn = "*"
+pymysql = "*"
 
 [requires]
 python_version = "3.8.1"
