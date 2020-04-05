@@ -22,9 +22,12 @@ export ELASTICSEARCH_URL=http://localhost:9200
 # Step 2 : allow you gmail account to send emails
 click on https://myaccount.google.com/lesssecureapps and  unlock
 
-# Step 2: setting up virtual environment
+# Step 3: setting up virtual environment
 - setting the right python version using pyenv
 - running `pipenv install`
 
-# Step 3 : running flask
+# Step 4 : running flask
 - running `flask run`
+
+# Step 5 : ssh connect to instance
+- `ssh -i ~/.ssh/gc corentinvdk@104.155.161.68`
