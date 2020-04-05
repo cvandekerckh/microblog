@@ -29,5 +29,23 @@ click on https://myaccount.google.com/lesssecureapps and  unlock
 # Step 4 : running flask
 - running `flask run`
 
-# Step 5 : ssh connect to instance
-- `ssh -i ~/.ssh/gc corentinvdk@104.155.161.68`
+# Step 5 : ssh connect to instance and prepare environment
+`ssh -i ~/.ssh/gc corentinvdk@104.155.161.68`
+
+(protect your instance : https://blog.miguelgrinberg.com/)
+
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev \
+libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl
+
+sudo apt-get install git
+
+curl https://pyenv.run | bash
+
+(following instruction)
+
+reload shell
+
+pyenv install --list | grep " 3\.[678]"
+
+pyenv install -v 3.7.2
