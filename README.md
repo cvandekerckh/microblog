@@ -101,7 +101,14 @@ see tutorial. If issues:
 sudo apt-get install dirmngr
 sudo certbot certonly --webroot -w /home/debian/microblog/app/static -d thementaldoctors.com
 
-# Step 8 : misc
+# Step 8 : update application
+(venv) $ git pull                              # download the new version
+(venv) $ sudo supervisorctl stop microblog     # stop the current server
+(venv) $ flask db upgrade                      # upgrade the database
+(venv) $ flask translate compile               # upgrade the translations
+(venv) $ sudo supervisorctl start microblog    # start a new server
+
+# Step 9 : misc
 
 checking storage remaining:
 df -H /dev/sda1
