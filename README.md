@@ -58,6 +58,10 @@ MAIL_PORT=25
 DATABASE_URL=mysql+pymysql://microblog:<db-password>@localhost:3306/microblog
 MS_TRANSLATOR_KEY=<your-translator-key-here>
 
+processes to set-up:
+- elastic search
+- redis
+
 # Step 4 : prepare languages
 flask translate compile
 
@@ -103,6 +107,7 @@ sudo certbot certonly --webroot -w /home/debian/microblog/app/static -d thementa
 
 # Step 8 : update application
 (venv) $ git pull                              # download the new version
+(vend) $ (pipenv install) if modif made
 (venv) $ sudo supervisorctl stop microblog     # stop the current server
 (venv) $ flask db upgrade                      # upgrade the database
 (venv) $ flask translate compile               # upgrade the translations
