@@ -60,7 +60,7 @@ MS_TRANSLATOR_KEY=<your-translator-key-here>
 
 processes to set-up:
 - elastic search
-- redis
+- redis : apt-get install redis-server + gunicorn
 
 # Step 4 : prepare languages
 flask translate compile
