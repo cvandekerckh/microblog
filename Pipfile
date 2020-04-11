@@ -25,6 +25,7 @@ elasticsearch = "*"
 gunicorn = "*"
 pymysql = "*"
 rq = "*"
+httpie = "*"
 
 [requires]
 python_version = "3.8.1"
