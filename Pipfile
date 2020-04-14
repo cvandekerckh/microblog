@@ -26,6 +26,7 @@ gunicorn = "*"
 pymysql = "*"
 rq = "*"
 httpie = "*"
+flask-httpauth = "*"
 
 [requires]
 python_version = "3.8.1"
