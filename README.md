@@ -61,6 +61,9 @@ MS_TRANSLATOR_KEY=<your-translator-key-here>
 processes to set-up:
 - elastic search
 - redis : apt-get install redis-server + gunicorn
+- translate
+- emails
+
 
 # Step 4 : prepare languages
 flask translate compile
@@ -81,7 +84,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'debian'@'localhost';
 UPDATE user SET plugin='unix_socket' WHERE User='debian';
 
 # Step 6 : deploy
-gunicorn file:
+gunicorn file (/etc/supervisor/conf.d/microblog.conf):
 [program:microblog]
 command=/home/ubuntu/microblog/venv/bin/gunicorn -b localhost:8000 -w 4 microblog:app
 directory=/home/ubuntu/microblog
@@ -119,4 +122,10 @@ checking storage remaining:
 df -H /dev/sda1
 allow https on compute :)
 
+# API Queries
+- get token:
+http --auth cvandekerckh:<password> POST https://thementaldoctors.com/api/tokens
 
+- get user:
+http GET https://thementaldoctors.com/api/users/1 \
+    "Authorization:Bearer pC1Nu9wwyNt8VCj1trWilFdFI276AcbS"
