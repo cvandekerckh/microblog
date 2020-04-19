@@ -58,10 +58,15 @@ MAIL_PORT=25
 DATABASE_URL=mysql+pymysql://microblog:<db-password>@localhost:3306/microblog
 MS_TRANSLATOR_KEY=<your-translator-key-here>
 
+## 3.1 Setting up emails
+see https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-debian-9
+
+## 3.2 Setting up elastic search
+
+## 3.3 Setting up distrib
 processes to set-up:
 - elastic search
 - redis : apt-get install redis-server + gunicorn
-- translate
 - emails
 
 
