@@ -60,15 +60,18 @@ MS_TRANSLATOR_KEY=<your-translator-key-here>
 
 ## 3.1 Setting up emails
 see https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-debian-9
+- with gmail, bypass additional security (captcha) by checking https://accounts.google.com/b/0/DisplayUnlockCaptcha
+- without gmail, good luck...
 
 ## 3.2 Setting up elastic search
+looks too intense for a small server
 
 ## 3.3 Setting up distrib
-processes to set-up:
-- elastic search
 - redis : apt-get install redis-server + gunicorn
-- emails
-
+- cp /etc/supervisor/conf.d/microblog.conf
+/etc/supervisor/conf.d/rq.conf (and adapt content)
+(ideally adapting to multiple processes)
+- sudo supervisorctl reload
 
 # Step 4 : prepare languages
 flask translate compile
