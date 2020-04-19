@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-04-10 18:14-0400\n"
-"PO-Revision-Date: 2020-04-10 18:19-0400\n"
+"POT-Creation-Date: 2020-04-19 18:41-0400\n"
+"PO-Revision-Date: 2020-04-19 18:43-0400\n"
 "Last-Translator: \n"
 "Language: fr\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -23,11 +23,19 @@ msgstr ""
 msgid "Please log in to access this page."
 msgstr "Connectez-vous pour accéder à cette page."
 
-#: app/translate.py:10
+#: app/translate.py:17
 msgid "Error: the translation service is not configured."
 msgstr "Erreur : le service de traduction n’est pas configuré."
 
-#: app/translate.py:18
+#: app/translate.py:24
+msgid "The detected language is not handled yet"
+msgstr "Le langage détecté n’a pas été reconnu"
+
+#: app/translate.py:26
+msgid "Your browser language is not handled yet"
+msgstr "Le langage de votre navigateur n’est pas pris en compte"
+
+#: app/translate.py:33
 msgid "Error: the translation service failed."
 msgstr "Erreur : le service de traduction a échoué."
 
